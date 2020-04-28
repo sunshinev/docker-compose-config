@@ -12,7 +12,7 @@ services:
       - "$PWD/docker/nginx/conf/conf.d:/etc/nginx/conf.d"
       - "/www/jaysun/php/:/usr/share/nginx/html"
     networks:
-      app_net:
+      default:
         ipv4_address: 172.18.0.2
 
   mysql:
@@ -24,7 +24,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      app_net:
+      default:
         ipv4_address: 172.18.0.6
 
 # networks:
