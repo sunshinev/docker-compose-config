@@ -13,7 +13,7 @@ services:
       - "/www/jaysun/php/:/usr/share/nginx/html"
     networks:
       app_net:
-        ipv4_address: 172.18.1.2
+        ipv4_address: 172.18.0.2
 
   mysql:
     image: "mysql:5.7.25"
@@ -25,12 +25,12 @@ services:
       - "3306:3306"
     networks:
       app_net:
-        ipv4_address: 172.18.1.6
+        ipv4_address: 172.18.0.6
 
-networks:
-  app_net:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.18.1.0/16
+# networks:
+#   app_net:
+#     driver: bridge
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: 172.18.1.0/16
